@@ -1,9 +1,10 @@
 import React from 'react'
+import GameCard from './GameCard'
 
 const ItemList = () => {
   return (
-    <div>ItemList</div>
+    <div><GameCard/></div>
   )
 }
 
-export default ItemList
+export default GameList
