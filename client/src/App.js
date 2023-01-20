@@ -8,16 +8,27 @@ import Home from "./components/static/Home";
 const App = () => {
   const [currentCart, setCurrentCart] = useState({items: []})
     const [items, setItems] = useState([])
-  return (
-    <Router>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/items" element={<ItemList />} />
-        <Route path="/checkout" element={<ViewCart />} />
-      </Routes>
-      </Router>
-  );
-}
+//   return (
+//     <Router>
+//       <Navbar />
+//       <Routes>
+//         <Route path="/" element={<Home />} />
+//         <Route path="/items" element={<ItemList />} />
+//         <Route path="/checkout" element={<ViewCart />} />
+//       </Routes>
+//       </Router>
+//   );
+// }
 
+return (
+  <Router>
+    <Navbar />
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/items" element={<ItemList items={items} setItems={setItems} />} />
+      <Route path="/checkout" element={<ViewCart currentCart={currentCart} setCurrentCart={setCurrentCart} />} />
+    </Routes>
+  </Router>
+);
+}
 export default App;
