@@ -1,10 +1,15 @@
 import React from 'react'
-import GameCard from './GameCard'
+import ItemCard from './ItemCard'
 
-const ItemList = () => {
+const ItemList = ({items}) => {
+  const itemCards=items.map(item => <ItemCard key = {item.id} item={item}/>)
   return (
-    <div><GameCard/></div>
+    <div>
+    <h2>Item List</h2>
+    {itemCards}
+      </div>
   )
 }
 
-export default GameList
+export default ItemList
+
