@@ -1,5 +1,5 @@
-import React from 'react'
-import {Card} from 'react-bootstrap'
+import React from 'react';
+import { Card } from '@material-ui/core';
 
 const ItemCard = ({item}) => {
   return (
@@ -10,9 +10,10 @@ const ItemCard = ({item}) => {
       <p>Price: {item.price}</p>
       <p>{item.image_url}</p>
       </Card>
-      </div>
+    </div>
   )
 }
 
-export default ItemCard
+export default ItemCard;
+
 
