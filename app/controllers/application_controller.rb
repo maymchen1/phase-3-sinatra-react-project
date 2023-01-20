@@ -1,9 +1,13 @@
+require_relative "./carts_controller"
+require_relative "./items_controller"
+
+
 class ApplicationController < Sinatra::Base
+
+  use CartController
+  use ItemController
+  
   set :default_content_type, 'application/json'
   
-  # Add your routes here
-  get "/" do
-    { message: "Good luck with your project!" }.to_json
-  end
-
+  
 end
